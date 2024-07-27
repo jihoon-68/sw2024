@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="BasicStyle.css">
-    <link rel="styleSheet" href="home.css">
+    <link rel="styleSheet" href="TodoList.css">
   </head>
   <body>
     <div class="content">
       <div id="list">
-        <p>html 공부하기</p>
-        <p>css 공부하기</p>
-        <p>js 공부하기</p>
+        <div id="listBox"><p>html 공부하기</p><input type="checkbox"></div> 
+        <div id="listBox"><p>css 공부하기</p><input type="checkbox"></div>
+        <div id="listBox"><p>js 공부하기</p><input type="checkbox"></div>
+      </div>
+      <div id="listInput">
+        <form action="#">
+          <div id="listBox">
+            <input type="text" style="width: 100%;">
+          </div>
+          <div id="listInputBottu">
+            <button type="submit">등록하기</button>
+          </div>
+        </form> 
       </div>
     </div>
+    
   </body>
 </html>

@@ -1,5 +1,54 @@
 #list{
+  display: block;
   width: 70%;
+  height: 75vh;
   margin: 0 auto;
+  padding: 10px 0;
   border: 1px solid black;
+  box-shadow: 3px 3px 3px 3px #cecece inset;
+}
+
+#list div p{
+  width: 70%;
+  height: 25px;
+  margin: auto 0px;
+}
+
+#listBox{
+  display: flex;
+  width: 70%;
+  height: 40px;
+  margin: 7px auto;
+  padding: 0 10px;
+  border: 1px solid black;
+  justify-content: space-between;
+  box-shadow: 3px 3px 3px 2px #cecece
+}
+
+#listInput #listBox{
+  padding: 0;
+}
+
+
+#listInput{
+  display: block;
+  width: 70%;
+  height: 90px;
+  margin: 20px auto;
+  padding: 0;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px 3px #cecece inset;
+}
+
+#listInputBottu{
+  width:70px;
+  height: 30px;
+  margin: 0 auto; 
+  box-shadow: 3px 3px 3px 2px #cecece;
+}
+#listInputBottu button{
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
 }
