@@ -11,5 +11,18 @@ body{
   max-width: 1600px;
   height: 100%;
   margin: 0 auto;
-  
+  border: 1px solid black;
+}
+.content nav{
+  position: static;
+  display: flex;
+  width: 100px;
+  height: 30px;
+  margin: 0 0 0 auto;
+  justify-content: space-between;
+}
+.content nav p{
+  width: 20px;
+  height: 20px;
+  margin: auto;
 }
