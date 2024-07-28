@@ -6,6 +6,7 @@ body{
   min-height: 800px;
   margin: 0px;
   padding: 0px;
+  background-image: url("Page/png/New-Retr.png");
 }
 
 a{
@@ -20,9 +21,10 @@ a{
   height: 100%;
   max-height: 900px;
   min-height: 800px;
-  margin: 5px auto;
+  margin: 30px auto 0 auto;
   border: 1px solid black;
   box-shadow: 3px 3px 3px 3px #555555;
+  background-color: rgba(255, 255, 255, 0.842);
 }
 .content nav{
   position: static;
