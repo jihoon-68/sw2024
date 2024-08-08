@@ -1,4 +1,9 @@
-#list{
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+#listDiv{
   display: block;
   width: 70%;
   height: 60vh;
@@ -7,37 +12,45 @@
   border: 1px solid black;
   box-shadow: 3px 3px 3px 3px #cecece inset;
 }
-
-#list div p{
+#listDiv li{
   width: 70%;
-  height: 25px;
-  margin: auto 0px;
-}
-
-#listBox{
-  display: flex;
-  width: 70%;
-  height: 40px;
+  height: 20px;
   margin: 7px auto;
-  padding: 0 10px;
+  padding: 10px;
   border: 1px solid black;
-  justify-content: space-between;
-  box-shadow: 3px 3px 3px 2px #cecece
+  box-shadow: 3px 3px 3px 2px #cecece;
 }
-
-#listInput #listBox{
-  padding: 0;
+#listDiv li input{
+  background-color: rgba(255, 255, 255, 0);
 }
-
+#listDiv li button{
+  float: right;
+  background-color: rgba(255, 252, 245, 0);
+}
+#listDiv li button:hover{
+  background-color: rgba(255, 255, 255, 0.479);
+}
 
 #listInput{
-  display: block;
   width: 70%;
   height: 90px;
   margin: 20px auto;
   padding: 0;
   border: 1px solid black;
   box-shadow: 3px 3px 3px 3px #cecece inset;
+  text-align: center;
+}
+#listInput input{
+  display: block;
+  width: 70%;
+  height: 25px;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0);
+
+}
+#listInput button{
+  background-color: rgba(255, 255, 255, 0);
 }
 
 #listInputBottu{
