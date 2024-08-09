@@ -24,10 +24,12 @@
     </div>
     <script>
       $(document).ready(function(){
-
+        
         var TodoList=JSON.parse(localStorage.getItem('TodoList'));
+        if(!TodoList){
+          TodoList =[];
+        }
         console.log(TodoList);
-        var cnt =0;
         
 
         function findIndex(TodoList,no) {
@@ -38,7 +40,10 @@
           return idx;
         }
 
-        $('#listDiv').ready(function(){
+        $('#list').ready(function listreset(){
+            console.log('준비됨');
+            $('#list').html('');
+            var cnt=0;
             TodoList.forEach(function(todo){
               $('#list').append(
                   `<li data-no="10${cnt++}">
@@ -87,22 +92,23 @@
               });
             };
           });
+          $('#submitBtn').click(function(e){
+              $(e.target).data('input',$(e.target).parent().find('input').val());
+              $(e.target).parent().parent().find('#list').append(
+                `<li data-no="${TodoList.length+100}">
+                  <input type='checkbox'/>
+                  <span>${$(e.target).data('input')}</span>
+                  <button>✕</button>
+                </li>`
+              );
+              TodoList.push({no:TodoList.length+100,titel:`${$(e.target).data('input')}`,doen:false});
+              localStorage.setItem('TodoList',JSON.stringify(TodoList));
+              $(e.target).parent().find('input').val('');
+              $(e.target).parent().find('input').focus();
+              $('#submitBtn').off();
+              $('#listDiv').unbind('ready').bind('ready',listreset());
+            });
         });
-        $('submitBtn').click(function(e){
-            $(e.target).data('input',$(e.target).parent().find('input').val());
-            $(e.target).parent().parent().find('#list').append(
-              `<li data-no="${TodoList.length+100}">
-                <input type='checkbox'/>
-                <span>${$(e.target).data('input')}</span>
-                <button>✕</button>
-              </li>`
-            );
-            TodoList.push({no:TodoList.length+100,titel:`${$(e.target).data('input')}`,doen:false});
-            localStorage.setItem('TodoList',JSON.stringify(TodoList));
-            $(e.target).parent().find('input').val('');
-            $(e.target).parent().find('input').focus();
-            location.reload();
-          });
       })
     </script>
   </body>

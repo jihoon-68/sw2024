@@ -11,6 +11,21 @@ ul{
   padding: 10px 0;
   border: 1px solid black;
   box-shadow: 3px 3px 3px 3px #cecece inset;
+  overflow: scroll;
+}
+#listDiv::-webkit-scrollbar{
+  width: 15px;
+}
+#listDiv::-webkit-scrollbar-thumb{
+  border: 1px solid black;
+  background: rgba(197, 186, 186, 0.438);
+}
+#listDiv::-webkit-scrollbar-track-piece{
+  background: rgba(197, 186, 186, 0.438);
+}
+#listDiv::-webkit-scrollbar-corner{
+  background: rgba(197, 186, 186, 0.438);
+  border: 1px solid black;
 }
 #listDiv li{
   width: 70%;

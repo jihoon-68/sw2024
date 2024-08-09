@@ -25,6 +25,7 @@ a{
   border: 1px solid black;
   box-shadow: 3px 3px 3px 3px #555555;
   background-color: rgba(255, 255, 255, 0.842);
+  
 }
 .content nav{
   position: static;
