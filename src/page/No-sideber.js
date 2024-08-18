@@ -12,7 +12,8 @@ export default ({ todoListArr, noCnt }) => {
     const newItem = { no: noCnt, title: title, done: false };
     setNoCnt(NoCnt + 1);
     setTodoList([...TodoListArr, newItem]);
-    console.log("저장");
+    //저장후 입력창 비우기
+    setEmendValue("");
   }
 
   //todo no 들고 왔어 필터로 no만 걸러낸뒤 저장
@@ -36,6 +37,8 @@ export default ({ todoListArr, noCnt }) => {
     let newArr = [...TodoListArr];
     newArr[EmendItem].title = title;
     setTodoList(newArr);
+
+    //수정후 입력창 비우기
     setEmendValue("");
   }
 
